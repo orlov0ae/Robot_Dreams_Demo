@@ -28,6 +28,7 @@ public class Lesson5_Conditional_Operators {
         weekDay(dayEnter);
         markCheck(newMark);
         ageCheck(newAge);
+//        newMarkCheck(newMark);
 
     }
 
@@ -130,4 +131,16 @@ public class Lesson5_Conditional_Operators {
         }
     }
 
+//    private static String newMarkCheck (String newMark) {
+//        return switch (newMark) {
+//            case "A" -> "Mark A means EXCELLENT";
+//            case "B" -> "Mark B means GOOD";
+//            case "C" -> "Mark C means FAIR";
+//            case "D" -> "Mark D means POOR";
+//            default -> "You enter wrong mark";
+//        };
+//    }
+
+
 }
+
