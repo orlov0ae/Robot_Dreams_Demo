@@ -2,20 +2,25 @@ import java.util.Scanner;
 
 public class Lesson6_Cycles {
     public static void main(String[] args) {
-//        System.out.println("From 1 to 10 numbers counting");
-//        numbersCounting();
-//        System.out.println("From 0 to 100 only even numbers counting");
-//        evenNumbersCounting();
-//        System.out.println("Factorial of a number");
-//        Scanner factorialNumber = new Scanner(System.in);
-//        System.out.println("Enter integer");
-//        int fNum = factorialNumber.nextInt();
-////        factorial(fNum);
-//        factorial();
-//        System.out.println("Fibonacci numbers");
-//        fibonacci();
-//        multiplication();
-        potential();
+        System.out.println("From 1 to 10 numbers counting");
+        numbersCounting();
+        System.out.println("From 0 to 100 only even numbers counting");
+        evenNumbersCounting();
+        System.out.println("Factorial of a number");
+        Scanner factorialNumber = new Scanner(System.in);
+        System.out.println("Enter integer to calculate factorial");
+        int fNum = factorialNumber.nextInt();
+        factorial(fNum);
+        System.out.println("Fibonacci numbers");
+        fibonacci();
+        Scanner rectangle = new Scanner(System.in);
+        System.out.println("Enter the values of the sides to construct the rectangle");
+        System.out.println("Enter height of rectangle");
+        int sideA = rectangle.nextInt();
+        System.out.println("Enter wide of rectangle");
+        int sideB = rectangle.nextInt();
+        rectangleConstruction(sideA, sideB);
+
     }
 
     private static void numbersCounting() {
@@ -33,58 +38,44 @@ public class Lesson6_Cycles {
         }
     }
 
+
     private static void factorial(int fNum) {
-        int factorial = 1;
-        for (int i=1; i<=fNum; i++) {
-            factorial *= i;
-        }
-        System.out.println(factorial);
-    }
-
-    private static void factorial() {
-        int a = 1;
-        int n = 1;
+        int fact = 1;
+        int i = 1;
         do {
-            n *= a*n;
-            a++;
+            fact = fact * i;
+            i++;
         }
-        while (a<8);
-        System.out.println(n);
+        while (i <= fNum);
+        System.out.println("Factorial of " + fNum + " number is " + fact);
     }
 
 
 
-//    private static void fibonacci() {
-//        int fib = 0;
-//        int nextFib = 1;
-//        int midFib = fib;
-//        while (nextFib<100) {
-//            System.out.println(nextFib);
-//            nextFib = midFib + nextFib;
-//            fib = nextFib;
-//        }
-//    }
-    private static void multiplication () {
-        int number = 3;
-        int mult = 1;
-                for (int i=1; i<=9; i++) {
-                    mult = number * i;
-                    System.out.println(mult);
+    private static void fibonacci() {
+        int fib = 0;
+        int midFib = 1;
+        int nextFib = 1;
+        while (fib<100) {
+            System.out.println(fib);
+            nextFib = fib + midFib;
+            fib = midFib;
+            midFib = nextFib;
+        }
+    }
+
+    private static void rectangleConstruction (int a, int b) {
+        for (int i=1; i<=a; i++) {
+            String str = "";
+            for (int j=1; j<=b; j++) {
+                if (j==1) {
+                    str += "|*";
+                }else {
+                    str += "*";
                 }
-    }
-
-    private static void potential () {
-        System.out.println("Введіть число для зведення в ступінь");
-        Scanner number = new Scanner(System.in);
-        int num = number.nextInt();
-        System.out.println("Введіть значення ступеня");
-        Scanner pot = new Scanner(System.in);
-        int p = pot.nextInt();
-        int potRes = 1;
-        for (int i=1; i<=p; i++) {
-            potRes = potRes * num;
+            }
+            System.out.println(str + "|");
         }
-        System.out.println(potRes);
     }
 
 
