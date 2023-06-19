@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,15 +8,23 @@ public class Practice {
 
         int [] array = new int[5];
 
-        int sum = 0;
+        int min = 0;
+        int max = 0;
 
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(10);
-            sum = sum + array[i];
+            min = array[i];
+
+            if (array[i] < min) {
+                min = array [i];
+            } else if (array[i] > max) {
+                max = array [i];
+            }
         }
 
-        System.out.println(array.toString());
-        System.out.println(sum);
+        System.out.println(Arrays.toString(array));
+        System.out.println(min);
+        System.out.println(max);
 
     }
 
