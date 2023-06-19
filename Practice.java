@@ -1,19 +1,26 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Practice {
     public static void main(String[] args) {
-        StringBuilder name = new StringBuilder("Java coder");
-        System.out.println("Слово до викликання методу: " + name);
-        charDeleting(name);
-        System.out.println("Слово після викликання методу: " + name);
+        Random random = new Random();
+
+        int [] array = new int[5];
+
+        int sum = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(10);
+            sum = sum + array[i];
+        }
+
+        System.out.println(array.toString());
+        System.out.println(sum);
 
     }
 
-    private static StringBuilder charDeleting (StringBuilder name) {
-        if (!name.isEmpty()) {
-            charDeleting(name.deleteCharAt(name.length()-1));
-        }
-        return name;
+
+
     }
 
 
@@ -66,4 +73,18 @@ public class Practice {
 //    private static float division (float a, float b) {
 //        return a / b;
 //    }
-}
+
+//public static void main(String[] args) {
+//    StringBuilder name = new StringBuilder("Java coder");
+//    System.out.println("Слово до викликання методу: " + name);
+//    charDeleting(name);
+//    System.out.println("Слово після викликання методу: " + name);
+//
+//}
+//
+//    private static StringBuilder charDeleting (StringBuilder name) {
+//        if (!name.isEmpty()) {
+//            charDeleting(name.deleteCharAt(name.length()-1));
+//        }
+//        return name;
+
