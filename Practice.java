@@ -6,19 +6,40 @@ public class Practice {
 
     public static void main(String[] args) {
 
-        int[][] matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] matrix2 = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
-        int [][]sumMutrix = new int[3][3];
+        int[][] squareMatrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] rectangularMatrix = {{1, 2, 3}, {4, 5, 6}};
+        int[][] singleElementMatrix = {{10}};
+
+        matixType(squareMatrix);
+        matixType(rectangularMatrix);
+        matixType(singleElementMatrix);
 
 
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[i].length; j++) {
-                sumMutrix[i][j] = matrix1[i][j] + matrix2[i][j];
-            }
+//        int[][] matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//        int[][] matrix2 = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+//        int [][]sumMutrix = new int[3][3];
+//
+//
+//        for (int i = 0; i < matrix1.length; i++) {
+//            for (int j = 0; j < matrix1[i].length; j++) {
+//                sumMutrix[i][j] = matrix1[i][j] + matrix2[i][j];
+//            }
+//        }
+//
+//        System.out.println(Arrays.deepToString(sumMutrix));
+
+    }
+
+    private static void matixType (int[][] matrix) {
+
+        if (matrix.length == matrix[0].length) {
+            System.out.println(Arrays.deepToString(matrix) + " is square matrix");
         }
-
-        System.out.println(Arrays.deepToString(sumMutrix));
-
+        else if (matrix.length == 1 && matrix[0].length == 1) {
+            System.out.println(Arrays.deepToString(matrix) + " is single element matrix");
+        } else {
+            System.out.println(Arrays.deepToString(matrix) + " is rectangular matrix");
+        }
     }
 
 
