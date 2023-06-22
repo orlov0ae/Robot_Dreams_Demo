@@ -3,40 +3,58 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Practice {
+
     public static void main(String[] args) {
-        Random random = new Random();
 
-        int [] array = new int[5];
+        int[][] matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] matrix2 = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+        int [][]sumMutrix = new int[3][3];
 
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(10);
-        }
-
-        int min = array[0];
-        int max = 0;
-
-        for (int i = 0; i < array.length; i++) {
-
-            if (array[i] < min) {
-                min = array [i];
-            } else if (array[i] > max) {
-                max = array [i];
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1[i].length; j++) {
+                sumMutrix[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
 
-        System.out.println(Arrays.toString(array));
-        System.out.println(min);
-        System.out.println(max);
+        System.out.println(Arrays.deepToString(sumMutrix));
 
     }
 
 
 
-    }
 
 
+//    Practice Arrays
 
+
+//    public static void main(String[] args) {
+//        Random random = new Random();
+//
+//        int[] array = new int[5];
+//
+//
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = random.nextInt(10);
+//        }
+//
+//        int min = array[0];
+//        int max = 0;
+//
+//        for (int i = 0; i < array.length; i++) {
+//
+//            if (array[i] < min) {
+//                min = array[i];
+//            } else if (array[i] > max) {
+//                max = array[i];
+//            }
+//        }
+//
+//        System.out.println(Arrays.toString(array));
+//        System.out.println(min);
+//        System.out.println(max);
+//
+//    }
 
 
 //    public static void main(String[] args) {
@@ -100,3 +118,4 @@ public class Practice {
 //        }
 //        return name;
 
+}
