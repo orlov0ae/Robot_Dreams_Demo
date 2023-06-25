@@ -6,13 +6,37 @@ public class Practice {
 
     public static void main(String[] args) {
 
-        int[][] squareMatrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] rectangularMatrix = {{1, 2, 3}, {4, 5, 6}};
-        int[][] singleElementMatrix = {{10}};
+        int[][] array = {{1, 2, 3, 4}, {5, 1, 2, 3}, {9, 5, 1, 2}};
 
-        matixType(squareMatrix);
-        matixType(rectangularMatrix);
-        matixType(singleElementMatrix);
+        boolean first = false;
+        boolean second = false;
+        boolean third = false;
+        boolean fourth = false;
+        if (array[1][0] == array[2][1]) {
+            first = true;
+        }
+        if (array[0][0] == array[1][1] && array[1][1] == array [2][2]) {
+            second = true;
+        }
+        if (array[0][1] == array[1][2] && array[1][2] == array [2][3]) {
+            third= true;
+        }
+        if (array[0][2] == array[1][3]) {
+            fourth = true;
+        }
+        if (first == second && second == third && third == fourth) {
+            System.out.println("The matrix " + Arrays.deepToString(array) + " is Toeplitz");
+        } else {
+            System.out.println("The matrix " + Arrays.deepToString(array) + " is not Toeplitz");
+        }
+
+//        int[][] squareMatrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//        int[][] rectangularMatrix = {{1, 2, 3}, {4, 5, 6}};
+//        int[][] singleElementMatrix = {{10}};
+//
+//        matixType(squareMatrix);
+//        matixType(rectangularMatrix);
+//        matixType(singleElementMatrix);
 
 
 //        int[][] matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -30,17 +54,17 @@ public class Practice {
 
     }
 
-    private static void matixType (int[][] matrix) {
-
-        if (matrix.length == matrix[0].length) {
-            System.out.println(Arrays.deepToString(matrix) + " is square matrix");
-        }
-        else if (matrix.length == 1 && matrix[0].length == 1) {
-            System.out.println(Arrays.deepToString(matrix) + " is single element matrix");
-        } else {
-            System.out.println(Arrays.deepToString(matrix) + " is rectangular matrix");
-        }
-    }
+//    private static void matixType (int[][] matrix) {
+//
+//        if (matrix.length == matrix[0].length) {
+//            System.out.println(Arrays.deepToString(matrix) + " is square matrix");
+//        }
+//        else if (matrix.length == 1 && matrix[0].length == 1) {
+//            System.out.println(Arrays.deepToString(matrix) + " is single element matrix");
+//        } else {
+//            System.out.println(Arrays.deepToString(matrix) + " is rectangular matrix");
+//        }
+//    }
 
 
 
