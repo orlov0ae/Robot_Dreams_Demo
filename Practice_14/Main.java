@@ -1,24 +1,31 @@
 package Practice_14;
 
 public class Main {
-//    Створіть інтерфейс "GeometricShape" з двома методами: "calculateArea()" та "calculatePerimeter()".
-//    Створіть два класи: "Rectangle" та "Circle", які реалізують цей інтерфейс. Вони повинні коректно розраховувати площу та периметр для кожної форми.
-//
-//    Підказка з формулами:
-//    Для прямокутника:
-//    Площа = ширина * висота
-//            Периметр = 2 * (ширина + висота)
-//
-//    Для кола:
-//    Площа = π * (радіус^2)
-//    Периметр (або довжина кола) = 2 * π * радіус
+//    Створіть інтерфейс "FlyingObject" з методами "takeOff()", "land()" та "fly()".
+//    Створіть інтерфейс "Steerable", який розширює "FlyingObject" та додає метод "steer()".
+//    Створіть два класи: "Airplane" та "Bird", які реалізують інтерфейс "Steerable".
+//    "Airplane" повинен мати додатковий метод "turnOnEngine()", а "Bird" - метод "nest()"
 public static void main(String[] args) {
-    Circle circle = new Circle();
-    Rectangle rectangle = new Rectangle();
-    circle.calculateArea();
-    circle.calculatePerimeter();
-    rectangle.calculateArea();
-    rectangle.calculatePerimeter();
+//    Circle circle = new Circle();
+//    Rectangle rectangle = new Rectangle();
+//    circle.calculateArea();
+//    circle.calculatePerimeter();
+//    rectangle.calculateArea();
+//    rectangle.calculatePerimeter();
+
+    Bird bird = new Bird();
+    Airplane airplane = new Airplane();
+
+    bird.fly();
+    bird.takeOff();
+    bird.land();
+    bird.steer();
+    bird.nest();
+    airplane.fly();
+    airplane.takeOff();
+    airplane.land();
+    airplane.steer();
+    airplane.turnOnEngine();
 }
 
 
