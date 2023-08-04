@@ -1,7 +1,7 @@
 package Lesson19;
 
 import java.util.HashMap;
-import java.util.HashSet;
+
 import java.util.Map;
 
 public class Advanced {
@@ -44,6 +44,4 @@ public class Advanced {
 //Завдання №7: Напишіть програму, яка перевертає мапу. Вхідна мапа повинна мати рядки як ключі та цілі числа як значення.
 //        Вихідна мапа повинна мати цілі числа як ключі та множини рядків як значення.
 //        // input ("a"=1, "b" = 2 , "c" = 3, "d"=3)  -> {1=[a], 2=[b], 3-[c,d]}
-//        Map<String,Integer> firstInputMap = new HashMap();
-//        Map<Integer, HashSet<String>> outPutMap = new HashMap();
-//        */
+//
