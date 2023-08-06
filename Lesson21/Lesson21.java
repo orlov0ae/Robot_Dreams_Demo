@@ -13,11 +13,12 @@ public class Lesson21 {
         Student smith = new Student("Smith", 4.9F);
         Student mcconnell = new Student("McConnell", 3.8F);
 
-        List<Student> students = new ArrayList<>();
-        students.add(johns);
-        students.add(reynolds);
-        students.add(smith);
-        students.add(mcconnell);
+        List<Student> students = new ArrayList<>(Arrays.asList(
+                johns,
+                reynolds,
+                smith,
+                mcconnell
+        ));
         System.out.println("Оригінальний список студентів: " + students);
 
         Comparator<Student> comparingSurname = Comparator.comparing(Student::getSurname);
