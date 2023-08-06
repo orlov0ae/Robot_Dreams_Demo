@@ -21,11 +21,11 @@ public class Lesson21 {
         ));
         System.out.println("Оригінальний список студентів: " + students);
 
-        Comparator<Student> comparingSurname = Comparator.comparing(Student::getSurname);
+        Comparator<Student> comparingSurname = (student1, student2) -> student1.getSurname().compareTo(student2.getSurname());
         students.sort(comparingSurname);
         System.out.println("Список відсортований за прізвищем: " + students);
 
-        Comparator<Student> comparingAverageMark = Comparator.comparing(Student::getAverageMark);
+        Comparator<Student> comparingAverageMark = (student1, student2) -> Float.compare(student1.getAverageMark(), student2.getAverageMark());
         students.sort(comparingAverageMark);
         System.out.println("Список відсортований за середнім балом: " + students);
 
