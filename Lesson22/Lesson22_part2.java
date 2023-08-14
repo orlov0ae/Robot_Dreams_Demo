@@ -21,8 +21,8 @@ public class Lesson22_part2 {
         );
 
         System.out.println("List of integers: " + intList);
-        System.out.println("Sum of List of integers = " + sum(intList));
-
+        System.out.println("Sum of List of integers (first method) = " + sumFirstMethod(intList));
+        System.out.println("Sum of List of integers (second method) = " + sumSecondMethod(intList));
     }
 
     static Integer random(){
@@ -30,8 +30,12 @@ public class Lesson22_part2 {
         return randomInt.nextInt(100);
     }
 
-    static Integer sum(List<Integer> list) {
+    static Integer sumFirstMethod(List<Integer> list) {
         return list.stream().mapToInt(Integer::intValue).sum();
+    }
+
+    static Integer sumSecondMethod (List<Integer> list) {
+        return list.stream().reduce(0, (a, b) -> a + b);
     }
 
 
