@@ -19,6 +19,11 @@ public class Lesson27 {
         System.out.println("Singleton1 - " + singleton1.toString());
         System.out.println("Singleton2 - " + singleton2.toString());
 
+        System.out.println("____________________");
+        System.out.println("Proxy");
+        Basic method = new Proxy();
+        method.basicMethod();
+
 
 
     }
