@@ -6,13 +6,13 @@ public class Lesson29 {
 
         Thread thread1 = new Thread(() -> {
             for(int i=1; i<=10; i++){
-                System.out.println("Thread #1. Number i=" + i);
+                System.out.println("Thread #1. First thread iteration #" + i);
             }
         });
 
         Thread thread2 = new Thread(() -> {
             for(int j=1; j<=10; j++){
-                System.out.println("Thread #2. Number j=" + j);
+                System.out.println("Thread #2. Second thread iteration #" + j);
             }
         });
 
