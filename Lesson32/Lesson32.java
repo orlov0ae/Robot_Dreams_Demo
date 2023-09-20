@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 public class Lesson32 {
 
+    //Не додавав функціоналу по студенту, тому, що, фактично те саму зробив для міста, та країни
     public static void main(String[] args) {
 
         DbCreation dbCreation = new DbCreation();
