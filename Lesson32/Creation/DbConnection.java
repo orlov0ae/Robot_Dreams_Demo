@@ -14,19 +14,16 @@ public class DbConnection {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String user = "root";
-            String password = "";
+            String password = "g5MPcyw";
             String base_url = "jdbc:mysql://localhost:3306/";
 
-            // Підключення без вказівки схеми
             Connection initialConnection = DriverManager.getConnection(base_url, user, password);
             String dbName = "robot_dreams";
             try (Statement statement = initialConnection.createStatement()) {
-                // Створення схеми, якщо вона не існує
                 statement.execute("CREATE DATABASE IF NOT EXISTS " + dbName);
             }
             initialConnection.close();
 
-            // Підключення до створеної (або існуючої) схеми
             String url = base_url + dbName;
             this.connection = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException ex) {

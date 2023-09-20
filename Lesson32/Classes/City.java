@@ -4,9 +4,10 @@ import java.util.Objects;
 
 public class City {
 
+
     private int id;
     private String name;
-    private double population;
+    private int population;
     private Country country;
 
     public int getId() {
@@ -25,11 +26,11 @@ public class City {
         this.name = name;
     }
 
-    public double getPopulation() {
+    public int getPopulation() {
         return population;
     }
 
-    public void setPopulation(double population) {
+    public void setPopulation(int population) {
         this.population = population;
     }
 
