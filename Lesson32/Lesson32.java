@@ -19,6 +19,8 @@ public class Lesson32 {
             CityManager cityManager = new CityManager();
             City city1 = cityManager.findCityById(1);
             System.out.println(city1);
+            System.out.println(cityManager.findCityById(2));
+            System.out.println(cityManager.findCityById(3));
             CountryManager countryManager = new CountryManager();
             Country country1 = countryManager.findCountryById(3);
             System.out.println(country1);
